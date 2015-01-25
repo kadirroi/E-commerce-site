@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h2>Sepetim</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="nav nav-pills nav-justified thumbnail">
+                <li class="disabled">
+                    <a href="#">
+                        <h4 class="list-group-item-heading">İlk Adım</h4>
+                        <p class="list-group-item-text">Dizaynınızı Seçiniz</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <h4 class="list-group-item-heading">İkinci Adım  </h4>
+                        <p class="list-group-item-text">Sepetinizi Onaylayın</p>
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a href="#">
+                        <h4 class="list-group-item-heading">Üçüncü Adım</h4>
+                        <p class="list-group-item-text">Kargo  Şirketinizi seçiniz</p>
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a href="#">
+                        <h4 class="list-group-item-heading">Dördüncü Adım</h4>
+                        <p class="list-group-item-text">Ödeme Yapınız</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Ürün</th>
+                        <th>Adet</th>
+                        <th class="text-center">Fiyat</th>
+                        <th class="text-center">KDV Dahil</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                            <div class="media">
+                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="/Content/img/img3.jpg" style="width: 72px; height: 72px;"> </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#"> ÜrünAdı</a></h4>
+
+                                    <span>Durum: </span><span class="text-success"><strong>Stokta</strong></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                            <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Sil
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-6">
+                            <div class="media">
+                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="/Content/img/img4.jpg" style="width: 72px; height: 72px;"> </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#">ÜrünAdı</a></h4>
+
+                                    <span>Durum: </span><span class="text-warning"><strong>Tedarikçi Firmadan Ürün Gelmekte </strong></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-md-1" style="text-align: center">
+                            <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                        </td>
+                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
+                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
+                        <td class="col-md-1">
+                            <button type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove"></span> Sil
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Toplam</h5></td>
+                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Kargo Ücreti</h5></td>
+                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Toplam fiyat: </h3></td>
+                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                            <a class="btn btn-success" href="/Home/"><span class="glyphicon glyphicon-shopping-cart"></span> Alışverişe Devamet
+                               
+                           
+                        </td>
+                        <td>
+                            <a class="btn btn-success" href="/PayProduct/">SATIN AL <span class="glyphicon glyphicon-play"></span></a>
+                                
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

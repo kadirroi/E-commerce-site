@@ -1,0 +1,13 @@
+﻿@model HalisahaFormamSite.Models.Order
+@{
+    ViewBag.Title = "Complete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Checkout Complete</h2>
+<p>Teşekkürler Siparişinizi! Sipariş Numaranız: @Model.OrderId</p>
+<p>
+    
+    @Html.ActionLink("Anasayfa",
+"Index", "Home")
+</p>

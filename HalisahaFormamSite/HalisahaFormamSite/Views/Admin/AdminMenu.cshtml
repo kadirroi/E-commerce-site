@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AdminMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="panel panel-primary ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-bookmark"></span> Admin Menü
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                            <a href="/Admin/ProductList" class="btn btn-danger btn-lg btn-block" role="button"><span class="glyphicon glyphicon-list"></span> <br />Ürün Listesi</a>
+                            <a href="/Admin/OrderList" class="btn btn-warning btn-lg btn-block" role="button"><span class="glyphicon glyphicon-list"></span> <br />Sipariş Listesi</a>
+                            <a href="/Admin/OrderDetaileList" class="btn btn-primary btn-lg btn-block" role="button"><span class="glyphicon glyphicon-list"></span> <br />Sipariş Detay Listesi</a>
+   
+                        </div>
+
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

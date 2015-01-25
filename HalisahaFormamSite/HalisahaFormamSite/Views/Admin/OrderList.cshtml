@@ -1,0 +1,114 @@
+﻿@model IEnumerable<HalisahaFormamSite.Models.Order>
+
+@{
+    ViewBag.Title = "OrderList";
+}
+
+<h2>OrderList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-bordered table-hover ">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UniFormName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UniformNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateHands)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UniformSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th ></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniFormName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniformNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateHands)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniformSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+         
+            <a href="@Url.Action("OrderEdit", "Admin", new { id = item.OrderId })" class="btn-primary btn-sm    text-center pull-left "><span class="glyphicon glyphicon-pencil"></span>Güncelle</a>
+            
+
+
+
+        </td>
+        <td>
+            <a href="@Url.Action("OrderDelete", "Admin", new { id = item.OrderId })" class="btn-danger  btn-sm  pull-left"> Sil <span class="glyphicon glyphicon-trash"></span></a>
+
+        </td>
+    </tr>
+    
+}
+
+</table>

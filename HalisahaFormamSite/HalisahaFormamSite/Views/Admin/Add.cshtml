@@ -1,0 +1,83 @@
+﻿@model HalisahaFormamSite.Models.Product
+
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    
+    <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">ÜrününAdı</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+    </div>
+    
+        <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürün Tanımı</label>
+       
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.Description, new { @style = "width:450px; height:200px;" })
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürünün Fiyatı</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+        </div>
+    </div>
+     
+    <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürünün İndirim Oranı</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.indirim, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürün Resmi</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PictureUrl, new { @class = "form-control" })
+        </div>
+    </div>
+        <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürün Yıldızı</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.stars, new { @class = "form-control" })
+        </div>
+    </div>
+      <div class="form-group">
+       
+        <label class="col-md-2 control-label" for="baslik">Ürün Stok Adeti</label>
+       
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.StokAdeti, new { @class = "form-control" })
+        </div>
+    </div>
+    
+   
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn"> Ekle</button>
+        </div>
+    </div>
+}
+

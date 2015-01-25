@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "AfterLogin";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@if (Session["LogedUserFullname"] != null)
+{
+    <text>
+        Hoşgeldin @Session["LogedUserFullname"].ToString()
+    </text>
+}
+
+
+
+

@@ -1,0 +1,153 @@
+﻿@model HalisahaFormamSite.Models.User
+
+@{
+    ViewBag.Title = "UserRegister";
+}
+
+<h2>Üye Kaydı</h2>
+
+
+@using (Html.BeginForm("UserRegister", "Account", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+
+    List<SelectListItem> LocalTeam = new List<SelectListItem>();
+    LocalTeam.Add(new SelectListItem
+         {
+             Text = "Galatasaray",
+             Value = "Galatasaray"
+         });
+    LocalTeam.Add(new SelectListItem
+    {
+        Text = "Fenerbahçe",
+        Value = "Fenerbahçe"
+    });
+    LocalTeam.Add(new SelectListItem
+         {
+             Text = "Beşiktaş",
+             Value = "Beşiktaş",
+             Selected = true
+         });
+    LocalTeam.Add(new SelectListItem
+         {
+             Text = "Trabzonspor",
+             Value = "Trabzonspor"
+         });
+
+    List<SelectListItem> GlobalTeam = new List<SelectListItem>();
+    GlobalTeam.Add(new SelectListItem
+         {
+             Text = "Barcelona",
+             Value = "Barcelona"
+         });
+    GlobalTeam.Add(new SelectListItem
+    {
+        Text = "AtleticoMadrid",
+        Value = "AtleticoMadrid"
+    });
+    GlobalTeam.Add(new SelectListItem
+         {
+             Text = "Real Madrid",
+             Value = "Real Madrid",
+             Selected = true
+         });
+    GlobalTeam.Add(new SelectListItem
+         {
+             Text = "B.dortmund",
+             Value = "B.dortmund"
+         });
+
+    GlobalTeam.Add(new SelectListItem
+    {
+        Text = "B.Munih",
+        Value = "B.Munih"
+    });
+     <hr/>
+     <div class="form-group">
+            @Html.LabelFor(model => model.FirstName)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            
+            </div>
+        </div>
+
+     <div class="form-group">
+            @Html.LabelFor(model => model.LastName)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+              
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+               
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Age)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.Age, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Age)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+              
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adress)
+            <div class="col-md-2">
+                @Html.TextAreaFor(model => model.Adress, new { @class = "form-control" })
+               
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LocalTeam)
+            <div class="col-md-2">
+                @Html.DropDownListFor(model => model.LocalTeam, LocalTeam, "-- Seçiniz --", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GlobalTeam)
+            <div class="col-md-2">
+                @Html.DropDownListFor(model => model.GlobalTeam, GlobalTeam, "-- Seçiniz --", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FavouritePlayer)
+            <div class="col-md-2">
+                @Html.TextBoxFor(model => model.FavouritePlayer, new { @class = "form-control" })
+               
+            </div>
+        </div>
+
+
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn-primary"> Kaydet</button>
+        </div>
+    </div>
+    
+}
+
+
+

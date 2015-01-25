@@ -1,0 +1,56 @@
+﻿@model  HalisahaFormamSite.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-xs-6">
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="~/Content/img/@Html.DisplayFor(model => model.PictureUrl)" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>
+                   Takım: @Html.DisplayFor(model => model.Name)
+                </h4>
+                <small>
+                   Detay: @Html.DisplayFor(model => model.Description)
+                </small>
+                <p>
+                   Fiyatı: @Html.DisplayFor(model => model.Price)
+                    <br />
+                  Stokta Bulunan: @Html.DisplayFor(model => model.StokAdeti) 
+
+                    <br />
+                  
+                </p>
+             
+
+            </div>
+
+                    @*<p class="button"> @Html.ActionLink("Sepete Ekle", "AddToCart","ShoppingCart", new { id = Model.Id }, "")*@
+                        <a href="@Url.Action("AddToCart", "ShoppingCart", new { id = Model.Id })" class="btn-success  btn-lg text-center pull-left "> <span class="glyphicon glyphicon-shopping-cart"></span> Sepete Ekle</a>
+                    
+                    @*</p>*@
+                    </div>
+               
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    <a href="@Url.Action("Index", "Home")">Back</a>
+</p>
+
+

@@ -1,0 +1,57 @@
+﻿@model HalisahaFormamSite.Models.Product
+
+
+
+
+
+@{
+    ViewBag.Title = "A";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+{   <div class="control-group">
+        <label class="control-label" for="baslik">ÜrününAdı</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Id)
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="baslik">ÜrününAdı</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Name)
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="icerik">Ürünün Tanımı</label>
+        <div class="controls">
+            @Html.TextAreaFor(model => model.Description, new { @style = "width:450px; height:200px;" })
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="icerik">
+            Ürünün Fiyatı/label>
+            <div class="controls">
+                @Html.TextBoxFor(model => model.Price)
+            </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="icerik">Ürünün İndirim Oranı </label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.indirim)
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="icerik">Ürün Resmi</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.PictureUrl)
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn"> Güncelle</button>
+        </div>
+    </div>
+}
+

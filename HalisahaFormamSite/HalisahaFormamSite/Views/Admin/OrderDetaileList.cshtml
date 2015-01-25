@@ -1,0 +1,73 @@
+﻿@model IEnumerable<HalisahaFormamSite.Models.OrderDetail>
+
+@{
+    ViewBag.Title = "OrderDetaileList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sipariş Detay</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Müşterinin İsmi")
+        </th>
+        <th>
+            @Html.DisplayName("Forma Adı")
+        </th>
+        
+        <th>
+            @Html.DisplayName("Forma Numarası")
+        </th>
+        <th>
+            @Html.DisplayName("Forma Resmi")
+        </th>
+        <th>
+            @Html.DisplayName("Stok Adeti")
+        </th>
+        <th>
+            @Html.DisplayName("Forma İndirim Oranı ")
+        </th>
+        <th>
+            @Html.DisplayName("Adet")
+        </th>
+       
+        <th>
+            @Html.DisplayName("Fiyatı")
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.UniformNumber)
+        </td>
+        <td>
+            <img src="@Url.Content("~/Content/img/")@Html.DisplayFor(modelItem => item.Product.PictureUrl)" width="80" height="80" class="img-responsive">
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.StokAdeti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.indirim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitPrice)
+        </td>
+      
+    </tr>
+}
+
+</table>

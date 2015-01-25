@@ -1,0 +1,36 @@
+﻿
+  
+      @if (Session["LogedUserFullname"] != null)
+{
+   
+          
+      
+    <ul class="nav navbar-nav right">   
+        <li class="text-danger">
+            
+                
+            @Html.ActionLink("Hoşgeldin"+" "+ @Session["LogedUserFullname"].ToString(), "Cikis", "Uyelik", new { area = "" }, null)
+         </li>
+
+
+          <li>
+             
+           
+            @Html.ActionLink("Çıkış", "LoginOut", "Account", new { area = "" }, null)
+        </li>
+    </ul>  
+          
+          
+}
+        
+
+else
+{
+    <ul class ="nav navbar-nav">
+        <li>@Html.ActionLink("Kayıt Ol", "UserRegister", "Account")
+
+        <li>
+            @Html.ActionLink("Giriş Yap", "Login", "Account")
+    </li>
+</ul>
+}

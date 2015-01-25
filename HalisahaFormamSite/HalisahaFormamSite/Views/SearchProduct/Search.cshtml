@@ -1,0 +1,66 @@
+﻿@model IEnumerable<HalisahaFormamSite.Models.Product>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+   
+    @using (Html.BeginForm("Search", "SearchProduct", FormMethod.Get))
+    {
+        @Html.TextBox("nameProduct")<br />
+        <input type="submit" value="Ara" />
+
+
+
+
+    }
+
+</p>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+
+
+
+<div class="container">
+
+    <hgroup class="mb20">
+        <h1>Arma Sonuçları</h1>
+        <h2 class="lead"><strong class="text-danger">@ViewBag.Message</strong> Sonuç bulundu </h2>
+    </hgroup>
+
+
+    <section class="col-xs-12 col-sm-6 col-md-12">
+        @foreach (var item in Model)
+        {
+
+
+            <article class="search-result row">
+                <div class="col-xs-12 col-sm-12 col-md-3">
+
+                    <img src="@Url.Content("~/Content/img/")@Html.DisplayFor(modelItem => item.PictureUrl)" width="80" height="80" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <ul class="meta-search">
+                        <li> <span>@Html.DisplayFor(modelItem=>item.Name)</span></li>
+                        <li><span>Stok Adeti:@Html.DisplayFor(modelItem => item.StokAdeti)</span></li>
+                        <li> <span>İndirim Oranı:@Html.DisplayFor(modelItem => item.indirim)</span></li>
+                        <li> <span>Fiyatı:@Html.DisplayFor(modelItem => item.Price)</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                    <h3>Forma Detay</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit, distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus doloremque.</p>
+                    
+                </div>
+                <span class="clearfix borda"></span>
+            </article>
+
+        }
+    </section>
+</div>
